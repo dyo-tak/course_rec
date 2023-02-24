@@ -1,5 +1,5 @@
 pandas 
-sklearn.feature_extraction.text 
-sklearn.metrics.pairwise 
+scikit-learn==1.0.1
+
 json 
 flask 
