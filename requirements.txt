@@ -1,0 +1,5 @@
+pandas as pd 
+sklearn.feature_extraction.text 
+sklearn.metrics.pairwise 
+json 
+flask 
