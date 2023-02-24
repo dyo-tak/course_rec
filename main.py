@@ -63,4 +63,4 @@ def predict_course(search_term):
 # result = predict_course("Stock")
 # print(result)
 # emdpoin
-.get
+
