@@ -18,14 +18,15 @@ def predict_course():
     num_of_rec = 7
     if search_term is not None:
         try:
-            results = get_recommendation(search_term,cosine_sim_mat,df,num_of_rec)
-            jresult = json.dump(results)
+            results = get_recommendation(search_term, cosine_sim_mat, df, num_of_rec)
+            jresult = pd.DataFrame(results)
+            jresult = jresult.to_json(orient='records')
             return jresult
         except:
-            results= "Not Found"
-            result_df = search_term_if_not_found(search_term,df)
-            result_df = result_df.to_json()
-            jresultx = json.dumps(result_df)
+            results="Not Found"
+            result_df=search_term_if_not_found(search_term, df)
+            jresultx=pd.DataFrame(result_df)
+            jresultx=jresultx.to_json(orient='records')
             return jresultx
     else:
         return 'Please provide a search term'
